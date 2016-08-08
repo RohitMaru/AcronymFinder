@@ -14,6 +14,10 @@
 		254A72881D58153D00EBE323 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 254A72871D58153D00EBE323 /* Assets.xcassets */; };
 		254A728B1D58153D00EBE323 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 254A72891D58153D00EBE323 /* LaunchScreen.storyboard */; };
 		254A72961D58153D00EBE323 /* AcronymFinderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 254A72951D58153D00EBE323 /* AcronymFinderTests.m */; };
+		25A2DAA01D5815D9004A3D76 /* DetailsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A2DA9F1D5815D9004A3D76 /* DetailsTableViewController.m */; };
+		25A2DAA11D5815D9004A3D76 /* DetailsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A2DA9F1D5815D9004A3D76 /* DetailsTableViewController.m */; };
+		BBFF063AA11CECDA6886FC06 /* libPods-AcronymFinder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07EC90BE57B1AA715C883892 /* libPods-AcronymFinder.a */; };
+		FD245C2BE5250A06BAAA1F3B /* libPods-AcronymFinderTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DDB2C782B9FA18EEB7B4DB9 /* libPods-AcronymFinderTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +31,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07EC90BE57B1AA715C883892 /* libPods-AcronymFinder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AcronymFinder.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DDB2C782B9FA18EEB7B4DB9 /* libPods-AcronymFinderTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AcronymFinderTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		254A72781D58153D00EBE323 /* AcronymFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AcronymFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		254A727C1D58153D00EBE323 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		254A727E1D58153D00EBE323 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -40,6 +46,12 @@
 		254A72911D58153D00EBE323 /* AcronymFinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AcronymFinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		254A72951D58153D00EBE323 /* AcronymFinderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AcronymFinderTests.m; sourceTree = "<group>"; };
 		254A72971D58153D00EBE323 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25A2DA9E1D5815D9004A3D76 /* DetailsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsTableViewController.h; sourceTree = "<group>"; };
+		25A2DA9F1D5815D9004A3D76 /* DetailsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsTableViewController.m; sourceTree = "<group>"; };
+		52E4796FB968073E24FACB66 /* Pods-AcronymFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AcronymFinder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AcronymFinder/Pods-AcronymFinder.debug.xcconfig"; sourceTree = "<group>"; };
+		AD97AC81A5313A7AF33EE9C6 /* Pods-AcronymFinderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AcronymFinderTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AcronymFinderTests/Pods-AcronymFinderTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B20F3D43BD2762DD725482DD /* Pods-AcronymFinderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AcronymFinderTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AcronymFinderTests/Pods-AcronymFinderTests.release.xcconfig"; sourceTree = "<group>"; };
+		FFE10AF3816CEC1C8664A32B /* Pods-AcronymFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AcronymFinder.release.xcconfig"; path = "Pods/Target Support Files/Pods-AcronymFinder/Pods-AcronymFinder.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBFF063AA11CECDA6886FC06 /* libPods-AcronymFinder.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD245C2BE5250A06BAAA1F3B /* libPods-AcronymFinderTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +80,8 @@
 				254A727A1D58153D00EBE323 /* AcronymFinder */,
 				254A72941D58153D00EBE323 /* AcronymFinderTests */,
 				254A72791D58153D00EBE323 /* Products */,
+				5AAD8A6BF42D011E68363B6A /* Pods */,
+				5B3CC78E8739110594541DB9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,6 +101,8 @@
 				254A727F1D58153D00EBE323 /* AppDelegate.m */,
 				254A72811D58153D00EBE323 /* ViewController.h */,
 				254A72821D58153D00EBE323 /* ViewController.m */,
+				25A2DA9E1D5815D9004A3D76 /* DetailsTableViewController.h */,
+				25A2DA9F1D5815D9004A3D76 /* DetailsTableViewController.m */,
 				254A72841D58153D00EBE323 /* Main.storyboard */,
 				254A72871D58153D00EBE323 /* Assets.xcassets */,
 				254A72891D58153D00EBE323 /* LaunchScreen.storyboard */,
@@ -111,6 +129,26 @@
 			path = AcronymFinderTests;
 			sourceTree = "<group>";
 		};
+		5AAD8A6BF42D011E68363B6A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				52E4796FB968073E24FACB66 /* Pods-AcronymFinder.debug.xcconfig */,
+				FFE10AF3816CEC1C8664A32B /* Pods-AcronymFinder.release.xcconfig */,
+				AD97AC81A5313A7AF33EE9C6 /* Pods-AcronymFinderTests.debug.xcconfig */,
+				B20F3D43BD2762DD725482DD /* Pods-AcronymFinderTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5B3CC78E8739110594541DB9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				07EC90BE57B1AA715C883892 /* libPods-AcronymFinder.a */,
+				1DDB2C782B9FA18EEB7B4DB9 /* libPods-AcronymFinderTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -118,9 +156,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 254A729A1D58153D00EBE323 /* Build configuration list for PBXNativeTarget "AcronymFinder" */;
 			buildPhases = (
+				D7042D2B0E997BFCBFB442EA /* [CP] Check Pods Manifest.lock */,
 				254A72741D58153D00EBE323 /* Sources */,
 				254A72751D58153D00EBE323 /* Frameworks */,
 				254A72761D58153D00EBE323 /* Resources */,
+				91DC230ADDA5594D82745D01 /* [CP] Embed Pods Frameworks */,
+				57E418B1C86E9718508D8FEF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -135,9 +176,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 254A729D1D58153D00EBE323 /* Build configuration list for PBXNativeTarget "AcronymFinderTests" */;
 			buildPhases = (
+				5126394D13113B6BFE0711A4 /* [CP] Check Pods Manifest.lock */,
 				254A728D1D58153D00EBE323 /* Sources */,
 				254A728E1D58153D00EBE323 /* Frameworks */,
 				254A728F1D58153D00EBE323 /* Resources */,
+				5C7F40082623F605F68180F3 /* [CP] Embed Pods Frameworks */,
+				79C89B3C8B74B3D105E168A1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -206,11 +250,105 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5126394D13113B6BFE0711A4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		57E418B1C86E9718508D8FEF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AcronymFinder/Pods-AcronymFinder-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5C7F40082623F605F68180F3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AcronymFinderTests/Pods-AcronymFinderTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		79C89B3C8B74B3D105E168A1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AcronymFinderTests/Pods-AcronymFinderTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		91DC230ADDA5594D82745D01 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AcronymFinder/Pods-AcronymFinder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D7042D2B0E997BFCBFB442EA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		254A72741D58153D00EBE323 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25A2DAA01D5815D9004A3D76 /* DetailsTableViewController.m in Sources */,
 				254A72831D58153D00EBE323 /* ViewController.m in Sources */,
 				254A72801D58153D00EBE323 /* AppDelegate.m in Sources */,
 				254A727D1D58153D00EBE323 /* main.m in Sources */,
@@ -221,6 +359,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25A2DAA11D5815D9004A3D76 /* DetailsTableViewController.m in Sources */,
 				254A72961D58153D00EBE323 /* AcronymFinderTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,6 +480,7 @@
 		};
 		254A729B1D58153D00EBE323 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52E4796FB968073E24FACB66 /* Pods-AcronymFinder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = AcronymFinder/Info.plist;
@@ -352,6 +492,7 @@
 		};
 		254A729C1D58153D00EBE323 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFE10AF3816CEC1C8664A32B /* Pods-AcronymFinder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = AcronymFinder/Info.plist;
@@ -363,6 +504,7 @@
 		};
 		254A729E1D58153D00EBE323 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD97AC81A5313A7AF33EE9C6 /* Pods-AcronymFinderTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = AcronymFinderTests/Info.plist;
@@ -375,6 +517,7 @@
 		};
 		254A729F1D58153D00EBE323 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B20F3D43BD2762DD725482DD /* Pods-AcronymFinderTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = AcronymFinderTests/Info.plist;
@@ -404,6 +547,7 @@
 				254A729C1D58153D00EBE323 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		254A729D1D58153D00EBE323 /* Build configuration list for PBXNativeTarget "AcronymFinderTests" */ = {
 			isa = XCConfigurationList;
@@ -412,6 +556,7 @@
 				254A729F1D58153D00EBE323 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

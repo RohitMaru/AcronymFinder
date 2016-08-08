@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  DetailsTableViewController.h
 //  AcronymFinder
 //
 //  Created by Rohit Marumamula on 8/7/16.
@@ -8,10 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface DetailsTableViewController : UITableViewController
 
-@property (strong, nonatomic) UIWindow *window;
-
+@property(nonatomic, copy) NSArray *listOfMeanings;
 
 @end
 
