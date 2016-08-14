@@ -8,8 +8,8 @@
 
 #import "ViewController.h"
 #import "DetailsTableViewController.h"
-#import <AFNetworking/AFNetworking.h>
-#import <MBProgressHUD/MBProgressHUD.h>
+#import "UIViewController+ProgressHUD.h"
+#import "AFServicesHandler.h"
 
 @interface ViewController ()<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *acronymTxtFld;
@@ -43,26 +43,19 @@ NSString *urlString = @"http://www.nactem.ac.uk/software/acromine/dictionary.py"
     
     NSString *acronym = self.acronymTxtFld.text;
     if (acronym.length > 0) {
+        [self showSpinner];
+
         __weak ViewController *weakSelf = self;
-        MBProgressHUD *progressHUD = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-        progressHUD.backgroundView.color = [UIColor blackColor];
-        progressHUD.backgroundView.alpha = 0.6;
-        
-        AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-        manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/plain"];
+        AFServicesHandler *serviceHandler = [[AFServicesHandler alloc] init];
         
         NSDictionary *params = @{@"sf" : acronym};
-        
-        [manager GET:urlString parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [serviceHandler performServiceCallWithURL:urlString andParameters:params onSuccess:^(id responseObject) {
             
             if ([responseObject isKindOfClass:[NSArray class]]) {
                 NSArray *responseArray = (NSArray *)responseObject;
                 NSArray *meanings = [self parseResponse:responseArray];
                 
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    [MBProgressHUD hideHUDForView:weakSelf.view animated:YES];
-                });
-                
+                [weakSelf hideSpinner];
                 if (meanings.count > 0) {
                     UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
                     DetailsTableViewController *detailsVC = [storyBoard instantiateViewControllerWithIdentifier:segueIdentifier];
@@ -74,18 +67,17 @@ NSString *urlString = @"http://www.nactem.ac.uk/software/acromine/dictionary.py"
                     [weakSelf presentAlert:@"No meanings found for this acronym/initialism" onVC:weakSelf];
                 }
             }
-            
-        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+
+        } onFailure:^(NSError *error) {
             NSString *description = error.localizedDescription;
             if (description == nil || description.length == 0) {
                 description = @"Please try later";
             }
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [MBProgressHUD hideHUDForView:weakSelf.view animated:YES];
-            });
+            [weakSelf hideSpinner];
             
             [weakSelf presentAlert:description onVC:weakSelf];
         }];
+        
     } else {
         [self presentAlert:@"Please enter an acronym"];
     }
