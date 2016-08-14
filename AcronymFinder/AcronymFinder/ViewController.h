@@ -10,8 +10,5 @@
 
 @interface ViewController : UIViewController
 
-//Made them public to unit test it..
--(NSArray *) parseResponse:(NSArray *)response;
-
 @end
 

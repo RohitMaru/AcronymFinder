@@ -9,6 +9,7 @@
 #import <XCTest/XCTest.h>
 #import "ViewController.h"
 #import "DetailsTableViewController.h"
+#import "AFParser.h"
 
 @interface AcronymFinderTests : XCTestCase
 
@@ -38,10 +39,7 @@
 }
 
 -(void)testIfParseResponseThrowsNil {
-    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    UINavigationController *navController = (UINavigationController *)[storyBoard instantiateInitialViewController];
-    ViewController *vc = (ViewController *)navController.topViewController;
-    XCTAssertNotNil([vc parseResponse:nil]);
+    XCTAssertNotNil([AFParser parseResponse:nil]);
 }
 
 -(void) testIfDetailsVCExists {

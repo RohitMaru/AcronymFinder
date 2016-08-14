@@ -10,6 +10,7 @@
 #import "DetailsTableViewController.h"
 #import "UIViewController+ProgressHUD.h"
 #import "AFServicesHandler.h"
+#import "AFParser.h"
 
 @interface ViewController ()<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *acronymTxtFld;
@@ -53,9 +54,9 @@ NSString *urlString = @"http://www.nactem.ac.uk/software/acromine/dictionary.py"
             
             if ([responseObject isKindOfClass:[NSArray class]]) {
                 NSArray *responseArray = (NSArray *)responseObject;
-                NSArray *meanings = [self parseResponse:responseArray];
-                
+                NSArray *meanings = [AFParser parseResponse:responseArray];
                 [weakSelf hideSpinner];
+                
                 if (meanings.count > 0) {
                     UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
                     DetailsTableViewController *detailsVC = [storyBoard instantiateViewControllerWithIdentifier:segueIdentifier];
@@ -82,31 +83,6 @@ NSString *urlString = @"http://www.nactem.ac.uk/software/acromine/dictionary.py"
         [self presentAlert:@"Please enter an acronym"];
     }
     
-}
-
--(NSArray *) parseResponse:(NSArray *)response {
-    NSMutableArray *finalMeaningsList = [NSMutableArray array];
-    
-    for (NSDictionary *fullFormsDict in response) {
-        id fullforms = fullFormsDict[@"lfs"];
-        if ([fullforms isKindOfClass:[NSArray class]]) {
-            NSArray *fullformsList = (NSArray *)fullforms;
-            for (NSDictionary *varsDict in fullformsList) {
-                id vars = varsDict[@"vars"];
-                NSMutableArray *meaningsList = [NSMutableArray array];
-                if ([vars isKindOfClass:[NSArray class]]) {
-                    NSArray *varsList = (NSArray *)vars;
-                    for (NSDictionary *eachVarDict in varsList) {
-                        NSString *eachVar = eachVarDict[@"lf"];
-                        [meaningsList addObject:eachVar];
-                    }
-                }
-                [finalMeaningsList addObject:meaningsList];
-            }
-        }
-        
-    }
-    return finalMeaningsList;
 }
 
 -(void) presentAlert:(NSString *)alertMsg {

@@ -16,6 +16,8 @@
 		254A72961D58153D00EBE323 /* AcronymFinderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 254A72951D58153D00EBE323 /* AcronymFinderTests.m */; };
 		254C53161D5FEC7B009AB90B /* AFServicesHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 254C53151D5FEC7B009AB90B /* AFServicesHandler.m */; };
 		254C531C1D5FEE89009AB90B /* UIViewController+ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 254C531B1D5FEE89009AB90B /* UIViewController+ProgressHUD.m */; };
+		254C531F1D5FF677009AB90B /* AFParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 254C531E1D5FF677009AB90B /* AFParser.m */; };
+		254C53201D5FF783009AB90B /* AFParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 254C531E1D5FF677009AB90B /* AFParser.m */; };
 		25A2DAA01D5815D9004A3D76 /* DetailsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A2DA9F1D5815D9004A3D76 /* DetailsTableViewController.m */; };
 		25A2DAA11D5815D9004A3D76 /* DetailsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A2DA9F1D5815D9004A3D76 /* DetailsTableViewController.m */; };
 		BBFF063AA11CECDA6886FC06 /* libPods-AcronymFinder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07EC90BE57B1AA715C883892 /* libPods-AcronymFinder.a */; };
@@ -52,6 +54,8 @@
 		254C53151D5FEC7B009AB90B /* AFServicesHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFServicesHandler.m; sourceTree = "<group>"; };
 		254C531A1D5FEE89009AB90B /* UIViewController+ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ProgressHUD.h"; sourceTree = "<group>"; };
 		254C531B1D5FEE89009AB90B /* UIViewController+ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ProgressHUD.m"; sourceTree = "<group>"; };
+		254C531D1D5FF677009AB90B /* AFParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFParser.h; sourceTree = "<group>"; };
+		254C531E1D5FF677009AB90B /* AFParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFParser.m; sourceTree = "<group>"; };
 		25A2DA9E1D5815D9004A3D76 /* DetailsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsTableViewController.h; sourceTree = "<group>"; };
 		25A2DA9F1D5815D9004A3D76 /* DetailsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsTableViewController.m; sourceTree = "<group>"; };
 		52E4796FB968073E24FACB66 /* Pods-AcronymFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AcronymFinder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AcronymFinder/Pods-AcronymFinder.debug.xcconfig"; sourceTree = "<group>"; };
@@ -105,14 +109,16 @@
 			children = (
 				254A727E1D58153D00EBE323 /* AppDelegate.h */,
 				254A727F1D58153D00EBE323 /* AppDelegate.m */,
-				254C53141D5FEC7B009AB90B /* AFServicesHandler.h */,
-				254C53151D5FEC7B009AB90B /* AFServicesHandler.m */,
-				254C531A1D5FEE89009AB90B /* UIViewController+ProgressHUD.h */,
-				254C531B1D5FEE89009AB90B /* UIViewController+ProgressHUD.m */,
 				254A72811D58153D00EBE323 /* ViewController.h */,
 				254A72821D58153D00EBE323 /* ViewController.m */,
 				25A2DA9E1D5815D9004A3D76 /* DetailsTableViewController.h */,
 				25A2DA9F1D5815D9004A3D76 /* DetailsTableViewController.m */,
+				254C53141D5FEC7B009AB90B /* AFServicesHandler.h */,
+				254C53151D5FEC7B009AB90B /* AFServicesHandler.m */,
+				254C531A1D5FEE89009AB90B /* UIViewController+ProgressHUD.h */,
+				254C531B1D5FEE89009AB90B /* UIViewController+ProgressHUD.m */,
+				254C531D1D5FF677009AB90B /* AFParser.h */,
+				254C531E1D5FF677009AB90B /* AFParser.m */,
 				254A72841D58153D00EBE323 /* Main.storyboard */,
 				254A72871D58153D00EBE323 /* Assets.xcassets */,
 				254A72891D58153D00EBE323 /* LaunchScreen.storyboard */,
@@ -359,6 +365,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				25A2DAA01D5815D9004A3D76 /* DetailsTableViewController.m in Sources */,
+				254C531F1D5FF677009AB90B /* AFParser.m in Sources */,
 				254C53161D5FEC7B009AB90B /* AFServicesHandler.m in Sources */,
 				254A72831D58153D00EBE323 /* ViewController.m in Sources */,
 				254C531C1D5FEE89009AB90B /* UIViewController+ProgressHUD.m in Sources */,
@@ -371,6 +378,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				254C53201D5FF783009AB90B /* AFParser.m in Sources */,
 				25A2DAA11D5815D9004A3D76 /* DetailsTableViewController.m in Sources */,
 				254A72961D58153D00EBE323 /* AcronymFinderTests.m in Sources */,
 			);
